@@ -27,3 +27,17 @@ class Computer
         @@users
     end
 end
+
+require_relative ’computer’
+
+meu_computador = Computer.new(’luiz’, 1_234)
+seu_computador = Computer.new(’seu’, 56_789)
+
+meu_computador.create(’compras.txt’)
+meu_computador.create(’contas.txt’)
+puts "Arquivos no meu computador: #{meu_computador.files}"
+
+seu_computador.create(’todo.txt’)
+puts "Arquivos no seu computador: #{seu_computador.files}"
+
+puts "Usuarios: #{Computer.users}"
